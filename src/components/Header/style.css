@@ -1,0 +1,17 @@
+.custom-list-item {
+  color: rgb(251 191 36);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1.5rem;
+
+  @media(max-width: 768px) {
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.custom-list-item:hover {
+  color: #fff;
+}
