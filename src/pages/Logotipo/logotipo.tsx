@@ -18,7 +18,7 @@ const Logotipo: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title content="Logotipos" backgroundImageUrl={bgAmarelo} />
+      <Title color="#fff" content="Logotipos" backgroundImageUrl={bgAmarelo} />
       <ImageGallery
         images={images}
         gridCols={2}

@@ -3,17 +3,29 @@ import React from "react";
 interface TitleProps {
   backgroundImageUrl: string;
   content: string;
+  color: string;
 }
 
-const Title: React.FC<TitleProps> = ({ backgroundImageUrl, content }) => {
+const Title: React.FC<TitleProps> = ({
+  backgroundImageUrl,
+  content,
+  color,
+}) => {
   return (
     <div
-      className="bg-no-repeat bg-cover h-32 w-full my-14 flex items-center justify-center"
+      className="h-24 w-full my-14 flex items-center justify-center"
       style={{
-        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.37) 100%), url(${backgroundImageUrl}), lightgray 50% / cover no-repeat`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.37) 100%), url(${backgroundImageUrl}), lightgray 50% `,
       }}
     >
-      <h1 className="text-[#F5B502] font-Poppins font-semibold text-7xl">
+      <h1
+        style={{
+          color: `${color}`,
+        }}
+        className="font-semibold text-5xl"
+      >
         {content}
       </h1>
     </div>

@@ -1,30 +1,11 @@
 import React from "react";
-import bgAmarelo from "../../assets/bgAmarelo.jpg";
-import ImageGallery from "../../components/ImagesGallery/imageGallery";
+import bgContato from "../../assets/bgContato.jpg";
 import Title from "../../components/Title/title";
 
 const Contato: React.FC = () => {
-  const images = [
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-  ];
-
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title content="Pintura de interiores" backgroundImageUrl={bgAmarelo} />
-      <ImageGallery
-        images={images}
-        gridCols={2}
-        showButton={false}
-        showDivider={false}
-      />
+      <Title color="#fff" backgroundImageUrl={bgContato} content="Contato" />
     </div>
   );
 };

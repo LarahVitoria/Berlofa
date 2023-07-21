@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { FiX, FiMenu } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import "./style.css";
 import bgImage from "../../assets/sidebg.jpg";
+
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -37,10 +38,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       }`}
     >
       <div className="flex flex-col items-center">
-        <button
-          onClick={onClose}
-          className="sm:m-4 sm:mt-8 sm:p-2 bg-transparent text-white "
-        >
+        <button onClick={onClose} className="bg-transparent text-white ">
           <FiX size={40} />
         </button>
         <ul className="p-4 flex flex-col items-center">

@@ -18,7 +18,7 @@ const MainPage: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Carousel />
+      <Carousel images={images} interval={2500} />
       <Divider />
       <ImageGallery images={images} gridCols={3} showButton={true} />
     </div>

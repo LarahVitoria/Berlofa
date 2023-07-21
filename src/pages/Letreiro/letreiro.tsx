@@ -18,7 +18,7 @@ const Letreiro: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title content="Letreiros" backgroundImageUrl={bgAmarelo} />
+      <Title color="#fff" content="Letreiros" backgroundImageUrl={bgAmarelo} />
       <ImageGallery
         images={images}
         gridCols={2}

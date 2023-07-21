@@ -18,7 +18,11 @@ const Objeto: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title content="Objetos Personalizados" backgroundImageUrl={bgAmarelo} />
+      <Title
+        color="#fff"
+        content="Objetos Personalizados"
+        backgroundImageUrl={bgAmarelo}
+      />
       <ImageGallery
         images={images}
         gridCols={2}

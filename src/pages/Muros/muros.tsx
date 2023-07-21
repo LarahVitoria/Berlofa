@@ -18,7 +18,11 @@ const Muros: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title content="Muros de Anúncios" backgroundImageUrl={bgAmarelo} />
+      <Title
+        color="#fff"
+        content="Muros de Anúncios"
+        backgroundImageUrl={bgAmarelo}
+      />
       <ImageGallery
         images={images}
         gridCols={2}
