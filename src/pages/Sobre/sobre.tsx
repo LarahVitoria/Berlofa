@@ -1,5 +1,5 @@
 import React from "react";
-import bgSobre2 from "../../assets/bgSobre2.jpg";
+import bgSobre2 from "../../assets/bgSobre.jpg";
 import Title from "../../components/Title/title";
 import Team from "../../components/Time/time";
 import Testimonials from "../../components/Depoimento/depoimento";

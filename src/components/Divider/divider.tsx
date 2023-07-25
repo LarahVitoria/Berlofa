@@ -1,7 +1,16 @@
 import React from "react";
-
-const Divider: React.FC = () => {
-  return <div className="w-5/6 h-0.5 my-14 bg-yellow-500"></div>;
+interface DividerProps {
+  show: boolean;
+  wide: boolean;
+}
+const Divider: React.FC<DividerProps> = ({ show, wide }) => {
+  return (
+    <hr
+      className={`my-4 ${wide ? "w-full" : ""}  ${
+        show ? "divide-[#f5b502]" : ""
+      }`}
+    />
+  );
 };
 
 export default Divider;
