@@ -17,7 +17,7 @@ const Title: React.FC<TitleProps> = ({
       style={{
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.37) 100%), url(${backgroundImageUrl}), lightgray 50% `,
+        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.37) 100%), url(${backgroundImageUrl}), lightgray 50% / cover no-repeat `,
       }}
     >
       <h1
