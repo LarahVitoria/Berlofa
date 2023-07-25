@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import Divider from "../Divider/divider";
 
 interface ImageGalleryProps {
   images: string[];

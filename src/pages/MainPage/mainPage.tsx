@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "../../components/Carrosel/carousel";
-import Divider from "../../components/Divider/divider";
 import ImageGallery from "../../components/ImagesGallery/imageGallery";
 
 const MainPage: React.FC = () => {
@@ -19,7 +18,10 @@ const MainPage: React.FC = () => {
   return (
     <div className="flex justify-center flex-col items-center mb-32">
       <Carousel images={images} interval={2500} />
-      <Divider wide={true} show={true} />
+      <hr
+        className="my-6"
+        style={{ borderColor: "#f5b502", height: "1px", width: "80%" }}
+      />
       <ImageGallery images={images} gridCols={3} showButton={true} />
     </div>
   );
