@@ -6,6 +6,41 @@ import Testimonials from "../../components/Depoimento/depoimento";
 import Metologia from "../../components/ComoTrabalhamos/metodologia";
 
 const Sobre: React.FC = () => {
+  const testimonials = [
+    {
+      id: 0,
+      name: "Roller Land",
+      role: "",
+      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      testimonial:
+        "Quando pensamos em qualidade de serviço logo pensamos no Berlofa pois confiamos no seu trabalho incrível, a arte que ele fez trouxe ao espaço um diferencial onde todos ao entrar se deparam com a pintura na parede e se encantam com cada detalhe...desta forma somos grato pelo seu trabalho e dedicação!",
+    },
+    {
+      id: 1,
+      name: "Toninho Bicudo",
+      role: "",
+      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      testimonial:
+        "Esclareço aos futuros clientes aqueles que ainda não tiveram a oportunidade de conhecer os serviços desses excelentes profissionais que o contratem, pois eu fiz trabalhos artísticos com eles e fiquei muito contente",
+    },
+    {
+      id: 2,
+      name: "Quallycred",
+      role: "",
+      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      testimonial:
+        "Só temos a elogiar o pessoal da equipe Berlofa, o César é super atencioso e com um trabalho sensacional, todos sempre prontos a nos atender, faz anos já que temos esta parceria, fazendo um ótimo trabalho e arrasando nas artes, sempre atendendo os nossos pedidos.",
+    },
+    {
+      id: 3,
+      name: "José Roberto Siqueira Junior ",
+      role: "",
+      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      testimonial:
+        "Recomendo o trabalho de César Berlofa, um ótimo profissional, com uma ótima bagagem técnica; o qual executou um belíssimo trabalho em meu portão",
+    },
+  ];
+
   return (
     <div className="flex justify-center flex-col items-center mb-32">
       <Title color="#000" content="Sobre Nós" backgroundImageUrl={bgSobre2} />
@@ -43,7 +78,7 @@ const Sobre: React.FC = () => {
       <Metologia />
 
       <Team />
-      <Testimonials />
+      <Testimonials intervalTime={6000} testimonials={testimonials} />
     </div>
   );
 };

@@ -21,15 +21,32 @@ const Contato: React.FC = () => {
             </p>
             <div className="flex items-center py-4 ">
               <div className="w-12 h-12 bg-[#313131] rounded-lg flex items-center justify-center">
-                <AiOutlineWhatsApp size={24} className="text-[#FFC727]" />
+                <IoLocationOutline size={24} className="text-[#FFC727]" />
               </div>
               <div className="ml-4">
                 <h2 className="text-lg text-[#FFC727] font-bold">
                   Nossa localização
                 </h2>
-                <p className="text-gray-600">
-                  Gerencie os usuários do sistema.
-                </p>
+                <a
+                  href="https://goo.gl/maps/Djp6Vm6K4qqoXeZZ7"
+                  className="text-gray-600 hover:text-gray-900 hover:font-medium"
+                >
+                  Rua Capitão Lisboa, 355 - Centro, Tatuí - SP
+                </a>
+              </div>
+            </div>
+            <div className="flex items-center py-4 ">
+              <div className="w-12 h-12 bg-[#313131] rounded-lg flex items-center justify-center">
+                <AiOutlineWhatsApp size={24} className="text-[#FFC727]" />
+              </div>
+              <div className="ml-4">
+                <h2 className="text-lg text-[#FFC727] font-bold">WhatsApp</h2>
+                <a
+                  href="https://wa.me/5515988145613?text=Ol%C3%A1%2C+estou+interessado%28a%29+no+seu+trabalho+e+gostaria+de+solicitar+um+or%C3%A7amento.+Poderia+me+dar+mais+informa%C3%A7%C3%B5es+sobre+o+assunto%3F+"
+                  className="text-gray-600 hover:text-gray-900 hover:font-medium"
+                >
+                  (15) 98814-5613
+                </a>
               </div>
             </div>
             <div className="flex items-center py-4 ">
@@ -37,19 +54,13 @@ const Contato: React.FC = () => {
                 <AiOutlineInstagram size={24} className="text-[#FFC727]" />
               </div>
               <div className="ml-4">
-                <h2 className="text-lg text-[#FFC727] font-bold">WhatsApp</h2>
-                <p className="text-gray-600">Navegue até a página inicial.</p>
-              </div>
-            </div>
-            <div className="flex items-center py-4 ">
-              <div className="w-12 h-12 bg-[#313131] rounded-lg flex items-center justify-center">
-                <IoLocationOutline size={24} className="text-[#FFC727]" />
-              </div>
-              <div className="ml-4">
                 <h2 className="text-lg text-[#FFC727] font-bold">Instagram</h2>
-                <p className="text-gray-600">
-                  Personalize as configurações do sistema.
-                </p>
+                <a
+                  href="https://www.instagram.com/cesarberlofa/"
+                  className="text-gray-600 hover:text-gray-900 hover:font-medium"
+                >
+                  @cesarberlofa
+                </a>
               </div>
             </div>
           </div>

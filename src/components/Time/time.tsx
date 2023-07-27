@@ -1,4 +1,10 @@
 import React from "react";
+import estagiario from "../../assets/images/estagiario.jpeg";
+import gerenteAdmin from "../../assets/images/gerente-admin.jpg";
+import gerenteFinanc from "../../assets/images/gerente-financ.jpg";
+import gerenteVendas from "../../assets/images/gerente-vendas.jpeg";
+import proprietario from "../../assets/images/proprietario.jpg";
+import gerenteOp from "../../assets/images/gerente-op.webp";
 
 const TeamMember = ({ name, role, imageUrl }) => {
   return (
@@ -17,19 +23,34 @@ const TeamMember = ({ name, role, imageUrl }) => {
 const Team = () => {
   const teamMembers = [
     {
-      name: "John Doe",
-      role: "CEO",
-      imageUrl: "https://via.placeholder.com/150",
+      name: "César Berlofa",
+      role: "Proprietário/ Artista ",
+      imageUrl: proprietario,
     },
     {
-      name: "Jane Smith",
-      role: "Designer",
-      imageUrl: "https://via.placeholder.com/150",
+      name: "Micael Caik de Moraes",
+      role: "Gerente de Vendas ",
+      imageUrl: gerenteVendas,
     },
     {
-      name: "Mike Johnson",
-      role: "Developer",
-      imageUrl: "https://via.placeholder.com/150",
+      name: "Rosana Bernardes",
+      role: "Gerente Financeira ",
+      imageUrl: gerenteFinanc,
+    },
+    {
+      name: "Caroline Campos",
+      role: "Gerente Administrativa ",
+      imageUrl: gerenteAdmin,
+    },
+    {
+      name: "Luis Paulo Casemiro",
+      role: "Gerente Operacional ",
+      imageUrl: gerenteOp,
+    },
+    {
+      name: "Guilherme Schramm",
+      role: "Estagiário",
+      imageUrl: estagiario,
     },
   ];
 

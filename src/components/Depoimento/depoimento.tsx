@@ -1,59 +1,63 @@
 import React, { useState, useEffect } from "react";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import bgDepoimento from "../../assets/bgDepoimento.jpg";
-const TestimonialCarousel: React.FC = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Leroy Jenkins",
-      role: "CEO of Company Co.",
-      avatarSrc: "https://source.unsplash.com/random/100x100?4",
-      testimonial:
-        "Et, dignissimos obcaecati. Recusandae praesentium doloribus vitae? Rem unde atque mollitia!",
-    },
-    {
-      id: 2,
-      name: "Laraa Jenkins",
-      role: "CEO of Company Co.",
-      avatarSrc: "https://source.unsplash.com/random/100x100?4",
-      testimonial:
-        "Et, dignissimos obcaecati. Recusandae praesentium doloribus vitae? Rem unde atque mollitia!",
-    },
-    // Adicione mais depoimentos aqui
-  ];
 
-  const [activeTestimonial, setActiveTestimonial] = useState(testimonials[0]);
+interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  avatarSrc: string;
+  testimonial: string;
+}
+
+interface TestimonialCarouselProps {
+  testimonials: Testimonial[];
+  intervalTime: number;
+}
+
+const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
+  testimonials,
+  intervalTime,
+}) => {
+  const [intervalId, setIntervalId] = useState<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [shouldRestartCarousel, setShouldRestartCarousel] = useState(false);
 
   const nextTestimonial = () => {
-    const currentIndex = testimonials.findIndex(
-      (testimonial) => testimonial.id === activeTestimonial.id,
-    );
-    const nextIndex = (currentIndex + 1) % testimonials.length;
-    setActiveTestimonial(testimonials[nextIndex]);
-    setActiveIndex(nextIndex);
+    setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
-    const currentIndex = testimonials.findIndex(
-      (testimonial) => testimonial.id === activeTestimonial.id,
-    );
-    const prevIndex =
-      (currentIndex - 1 + testimonials.length) % testimonials.length;
-    setActiveTestimonial(testimonials[prevIndex]);
-    setActiveIndex(prevIndex);
+  const handleIndicatorClick = (index: number) => {
+    stopCarousel();
+    setActiveIndex(index);
+    setShouldRestartCarousel(true);
+  };
+
+  const startCarousel = () => {
+    stopCarousel();
+    const interval = window.setInterval(nextTestimonial, intervalTime);
+    setIntervalId(interval);
+  };
+
+  const stopCarousel = () => {
+    if (intervalId !== null) {
+      window.clearInterval(intervalId);
+    }
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 3000);
+    if (shouldRestartCarousel) {
+      startCarousel();
+      setShouldRestartCarousel(false);
+    }
+  }, [shouldRestartCarousel]);
 
-    return () => clearInterval(interval);
-  }, [activeTestimonial]);
+  useEffect(() => {
+    startCarousel();
+    return stopCarousel;
+  }, []);
 
   return (
-    <section className="p-6">
+    <section className="p-6 flex items-center flex-col">
       <div className="inline-flex items-center justify-center w-full">
         <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
         <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
@@ -64,8 +68,13 @@ const TestimonialCarousel: React.FC = () => {
         Confira o que nossos clientes têm a dizer sobre nossa empresa e
         serviços. Satisfação garantida em cada projeto!
       </p>
-      <div className="container max-w-xl mx-auto">
-        <div className="relative">
+      <div className="md:w-9/12 w-full">
+        <div
+          className="relative"
+          data-te-carousel-init
+          data-te-carousel-slide
+          id="carouselExampleSlidesOnly"
+        >
           <div
             style={{
               borderRadius: "8px",
@@ -76,19 +85,23 @@ const TestimonialCarousel: React.FC = () => {
             <div className="md:mr-8 flex justify-center">
               <div className="w-32 h-32 rounded-full overflow-hidden">
                 <img
-                  src={activeTestimonial.avatarSrc}
+                  src={testimonials[activeIndex].avatarSrc}
                   alt=""
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
             </div>
             <div className="flex-grow flex justify-center flex-col">
-              <blockquote className="max-w-lg text-center sm:text-left  text-lg italic text-[#F5B502]">
-                "{activeTestimonial.testimonial}"
+              <blockquote className="text-center sm:text-left  text-lg italic text-[#F5B502]">
+                "{testimonials[activeIndex].testimonial}"
               </blockquote>
               <div className="text-center md:text-left text-[#F5B502]">
-                <p className="my-2 font-extrabold">{activeTestimonial.name}</p>
-                <p className="text-[#F5B502]">{activeTestimonial.role}</p>
+                <p className="my-2 font-extrabold">
+                  {testimonials[activeIndex].name}
+                </p>
+                <p className="text-[#F5B502]">
+                  {testimonials[activeIndex].role}
+                </p>
               </div>
             </div>
           </div>
@@ -98,11 +111,9 @@ const TestimonialCarousel: React.FC = () => {
               <button
                 key={testimonial.id}
                 type="button"
-                onClick={() => setActiveIndex(index)}
+                onClick={() => handleIndicatorClick(index)}
                 className={`w-2 h-2 mx-1 rounded-full ${
-                  index === activeIndex
-                    ? "bg-blue-500"
-                    : "bg-blue-200 dark:bg-gray-600"
+                  index === activeIndex ? "bg-amber-300" : "bg-amber-100"
                 }`}
               ></button>
             ))}

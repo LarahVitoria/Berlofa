@@ -14,14 +14,24 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
   showButton,
   showDivider = true,
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndexes, setHoveredIndexes] = useState<(number | null)[]>(() =>
+    images.map(() => null),
+  );
 
   const handleMouseEnter = (index: number) => {
-    setHoveredIndex(index);
+    setHoveredIndexes((prevState) => {
+      const newHoveredIndexes = [...prevState];
+      newHoveredIndexes[index] = index;
+      return newHoveredIndexes;
+    });
   };
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
+  const handleMouseLeave = (index: number) => {
+    setHoveredIndexes((prevState) => {
+      const newHoveredIndexes = [...prevState];
+      newHoveredIndexes[index] = null;
+      return newHoveredIndexes;
+    });
   };
 
   // Define o número de colunas com base no tamanho da tela
@@ -43,14 +53,14 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
               cols === 1 ? "grid-cols-1" : `md:grid-cols-${cols}`
             }`}
           >
-            {imageChunk.map((image, index) => (
+            {imageChunk.map((image, imgIndex) => (
               <div
-                key={index}
+                key={imgIndex}
                 className={`relative cursor-pointer w-full ${
-                  cols === 2 ? "py-3.5" : "" // Adiciona espaçamento entre as imagens quando cols for igual a 2
+                  cols === 2 ? "p-2" : ""
                 }`}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
+                onMouseEnter={() => handleMouseEnter(index * cols + imgIndex)}
+                onMouseLeave={() => handleMouseLeave(index * cols + imgIndex)}
               >
                 <div
                   style={{
@@ -60,23 +70,25 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                   className="w-full h-64 md:h-56 lg:h-96 overflow-hidden"
                 >
                   <img
-                    alt={`gallery-${index}`}
+                    alt={`gallery-${index * cols + imgIndex}`}
                     className={`object-cover w-full h-full transition-transform ${
-                      hoveredIndex === index ? "scale-110" : ""
+                      hoveredIndexes[index * cols + imgIndex] !== null
+                        ? "scale-110"
+                        : ""
                     }`}
                     src={image}
                   />
                 </div>
 
                 <CSSTransition
-                  in={hoveredIndex === index}
+                  in={hoveredIndexes[index * cols + imgIndex] !== null}
                   timeout={300}
                   classNames="fade"
                   unmountOnExit
                 >
                   <div className="absolute inset-0 flex items-center justify-center flex-col bg-black bg-opacity-50 transition-opacity duration-300">
                     <h2 className="text-white text-4xl font-bold leading-8 mb-2">
-                      Título da Imagem {index + 1}
+                      Título da Imagem {index * cols + imgIndex + 1}
                     </h2>
                     {showButton && (
                       <button className="text-white text-xl">Botão</button>

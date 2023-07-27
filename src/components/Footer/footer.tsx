@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
-import bgImage from "../../assets/footerbg.jpg";
+import bgImage from "../../assets/bgFooter.jpg";
 import logo from "../../assets/logo-cesar-amarela.svg";
 import "./footer.css";
 
@@ -66,8 +66,12 @@ const Footer: React.FC = () => {
           <a className="cursor-pointer"> - Desenvolvido por Larah</a>
         </p>
         <div className="flex justify-between">
-          <AiOutlineInstagram className="w-6 md:w-9 h-6 md:h-9" />
-          <AiOutlineWhatsApp className="w-6 md:w-9 h-6 md:h-9" />
+          <a href="https://wa.me/5515988145613?text=Ol%C3%A1%2C+estou+interessado%28a%29+no+seu+trabalho+e+gostaria+de+solicitar+um+or%C3%A7amento.+Poderia+me+dar+mais+informa%C3%A7%C3%B5es+sobre+o+assunto%3F+">
+            <AiOutlineWhatsApp className="w-6 md:w-9 h-6 md:h-9 md:mx-2" />
+          </a>
+          <a href="https://www.instagram.com/cesarberlofa/">
+            <AiOutlineInstagram className="w-6 md:w-9 h-6 md:h-9 md:mx-2" />
+          </a>
         </div>
       </div>
     </footer>
