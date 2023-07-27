@@ -1,11 +1,9 @@
-// src/components/Footer/footer.tsx
-
 import React, { useEffect, useState } from "react";
 import { AiOutlineInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 import { useInView } from "react-intersection-observer";
 import bgImage from "../../assets/footerbg.jpg";
 import logo from "../../assets/logo-cesar-amarela.svg";
-import "./footer.css"; // Certifique-se de ter um arquivo CSS para importar e aplicar estilos adicionais se necessário
+import "./footer.css";
 
 const Footer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,15 +59,15 @@ const Footer: React.FC = () => {
       }}
       className="w-full text-[#f5b502] bg-no-repeat bg-cover"
     >
-      <div className="container mx-auto px-5 lg:px-32 flex items-center justify-between h-full">
-        <img src={logo} width={"200px"} alt="Berlofa" />
-        <p className="text-lg font-semibold">
+      <div className="container mx-auto px-2 lg:px-32 flex items-center justify-between h-full">
+        <img src={logo} className="w-28 md:w-48" alt="Berlofa" />
+        <p className="text-sm md:text-lg font-semibold">
           © {new Date().getFullYear()}
-          <a className="cursor-pointer"> - Desenvolvido por Larah Vitória </a>
+          <a className="cursor-pointer"> - Desenvolvido por Larah</a>
         </p>
         <div className="flex justify-between">
-          <AiOutlineInstagram size={35} />
-          <AiOutlineWhatsApp size={35} />
+          <AiOutlineInstagram className="w-6 md:w-9 h-6 md:h-9" />
+          <AiOutlineWhatsApp className="w-6 md:w-9 h-6 md:h-9" />
         </div>
       </div>
     </footer>

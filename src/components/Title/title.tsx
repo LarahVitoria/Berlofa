@@ -13,18 +13,18 @@ const Title: React.FC<TitleProps> = ({
 }) => {
   return (
     <div
-      className="h-24 w-full my-14 flex items-center justify-center"
+      className="h-16 md:h-24 title w-full my-7 md:my-14 flex items-center justify-center"
       style={{
+        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.37) 100%), url(${backgroundImageUrl}), lightgray 50%`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        background: `linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.37) 100%), url(${backgroundImageUrl}), lightgray 50% / cover no-repeat `,
       }}
     >
       <h1
         style={{
           color: `${color}`,
         }}
-        className="font-semibold text-5xl"
+        className="font-semibold text-2xl md:text-5xl"
       >
         {content}
       </h1>

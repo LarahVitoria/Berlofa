@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Sidebar from "./sidebar";
-import logo from "../../assets/logo-cesar.svg";
+import logo from "../../assets/logo.svg";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -56,7 +56,7 @@ const TestimonialCarousel: React.FC = () => {
     <section className="p-6">
       <div className="inline-flex items-center justify-center w-full">
         <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
-        <span className="absolute px-3 text-[#F5B502] text-3xl font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
+        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
           Depoimentos
         </span>
       </div>
@@ -91,20 +91,6 @@ const TestimonialCarousel: React.FC = () => {
                 <p className="text-[#F5B502]">{activeTestimonial.role}</p>
               </div>
             </div>
-            {/* <button
-              type="button"
-              onClick={prevTestimonial}
-              className="text-3xl text-blue-500 dark:text-blue-400 absolute left-0 top-1/2 transform -translate-y-1/2"
-            >
-              <BsArrowLeft />
-            </button>
-            <button
-              type="button"
-              onClick={nextTestimonial}
-              className="text-3xl text-blue-500 dark:text-blue-400 absolute right-0 top-1/2 transform -translate-y-1/2"
-            >
-              <BsArrowRight />
-            </button> */}
           </div>
           <div className="flex justify-center mt-4">
             {/* Botões indicadores (bolinhas) */}

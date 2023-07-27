@@ -6,3 +6,8 @@
   font-family: 'Poppins', sans-serif !important;
 
 }
+
+.title {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}

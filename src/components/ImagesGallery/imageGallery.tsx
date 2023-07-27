@@ -39,13 +39,16 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       {imageChunks.map((imageChunk, index) => (
         <React.Fragment key={index}>
           <div
-            className={`grid gap-7 grid-cols-1 md:grid-cols-${cols} "
+            className={`grid gap-7 ${
+              cols === 1 ? "grid-cols-1" : `md:grid-cols-${cols}`
             }`}
           >
             {imageChunk.map((image, index) => (
               <div
                 key={index}
-                className={`relative cursor-pointer w-full`}
+                className={`relative cursor-pointer w-full ${
+                  cols === 2 ? "py-3.5" : "" // Adiciona espaçamento entre as imagens quando cols for igual a 2
+                }`}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
