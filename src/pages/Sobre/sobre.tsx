@@ -50,9 +50,28 @@ const Sobre: React.FC = () => {
         <div className="p-2">
           <h2 className="text-xl font-bold">Nossa história</h2>
           <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
-            convallis dolor, id euismod nulla. Integer rhoncus ac ipsum ac
-            cursus. Sed eu bibendum elit. Ut eu congue velit.
+            A Berlofa arte e pintura nasceu da paixão pela arte e a vontade
+            incontrolável de empreender. No início éramos um só artista, eu
+            César Berlofa, logo vi necessidade de uma equipe, pelo fato de meu
+            filho estar nascendo e eu não poder estar em todos os lugares ao
+            mesmo tempo. Criamos uma equipe grande com advogado, administrativo
+            e operacional. Não foi o suficiente, pois a caminhada ainda era
+            longa para que tudo se encaixasse, então fomos obrigados a desfazer
+            tudo! Desde equipe até mesmo venda de novos trabalhos. Paramos tudo,
+            entregamos os trabalhos que estavam em andamento e recomeçamos!
+            Agora sim com um alicerce muito mais profundo e firme, nos
+            aprimoramos na arte e em tudo que ela podia oferecer. Das técnicas
+            mais difíceis até as mais simples, nos melhoramos tudo, para que a
+            entrega fosse 100%. Mas ainda não estávamos contentes, então
+            decidimos agregar uma equipe administrativa e de propaganda, nos
+            aprofundando em melhor atender os clientes desde assinatura do
+            contrato até depois da entrega do trabalho. Hoje temos nossa sede,
+            no centro de Tatuí e já contamos com mais de 10 cidades por o de
+            passamos e deixamos nosso trabalho alegrando a vista para quem
+            passar. Hoje temos a honra de dizer que somos a maior empresa de
+            pintura de Tatuí, contando com serviços para fachadas de
+            empreendimentos, decorações interna para casas e empresas, pintura
+            de base em geral, muros de anúncio e personalização de itens.
           </p>
         </div>
 

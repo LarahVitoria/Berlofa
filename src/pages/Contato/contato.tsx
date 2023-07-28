@@ -67,15 +67,12 @@ const Contato: React.FC = () => {
           <img src={Ilustration} alt="Ilustração " />
         </div>
       </div>
-      <button
+      <a
         className="bg-[#ffc727]  hover:bg-black text-black hover:text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300"
-        onClick={() => {
-          // Lógica para encaminhar o usuário para a página de orçamento
-          // Por exemplo: window.location.href = "/fazer-orcamento";
-        }}
+        href="https://form.jotform.com/232015497370050"
       >
         Fazer Orçamento
-      </button>
+      </a>
     </div>
   );
 };
