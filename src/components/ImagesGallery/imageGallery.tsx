@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
+interface ImageProps {
+  img: string;
+  titulo?: string;
+  url?: string;
+}
+
 interface ImageGalleryProps {
-  images: string[];
+  images: ImageProps[];
   gridCols: number;
   showButton: boolean;
   showDivider?: boolean;
@@ -14,7 +20,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
   showButton,
   showDivider = true,
 }) => {
-  const [hoveredIndexes, setHoveredIndexes] = useState<(number | null)[]>(() =>
+  const [hoveredIndexes, setHoveredIndexes] = useState<(number | null)[]>(
     images.map(() => null),
   );
 
@@ -34,10 +40,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
     });
   };
 
-  // Define o número de colunas com base no tamanho da tela
   const cols = gridCols >= 1 ? gridCols : 1;
 
-  const imageChunks: string[][] = [];
+  const imageChunks: ImageProps[][] = [];
   const totalChunks = Math.ceil(images.length / cols);
 
   for (let i = 0; i < totalChunks; i++) {
@@ -49,16 +54,14 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       {imageChunks.map((imageChunk, index) => (
         <React.Fragment key={index}>
           <div
-            className={`grid gap-7 ${
+            className={`grid gap-7 mb-5 ${
               cols === 1 ? "grid-cols-1" : `md:grid-cols-${cols}`
             }`}
           >
             {imageChunk.map((image, imgIndex) => (
               <div
                 key={imgIndex}
-                className={`relative cursor-pointer w-full ${
-                  cols === 2 ? "p-2" : ""
-                }`}
+                className={`relative w-full ${cols === 2 ? "p-2" : ""}`}
                 onMouseEnter={() => handleMouseEnter(index * cols + imgIndex)}
                 onMouseLeave={() => handleMouseLeave(index * cols + imgIndex)}
               >
@@ -70,13 +73,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                   className="w-full h-64 md:h-56 lg:h-96 overflow-hidden"
                 >
                   <img
-                    alt={`gallery-${index * cols + imgIndex}`}
+                    alt={image.titulo}
                     className={`object-cover w-full h-full transition-transform ${
                       hoveredIndexes[index * cols + imgIndex] !== null
                         ? "scale-110"
                         : ""
                     }`}
-                    src={image}
+                    src={image.img}
                   />
                 </div>
 
@@ -88,10 +91,15 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                 >
                   <div className="absolute inset-0 flex items-center justify-center flex-col bg-black bg-opacity-50 transition-opacity duration-300">
                     <h2 className="text-white text-4xl font-bold leading-8 mb-2">
-                      Título da Imagem {index * cols + imgIndex + 1}
+                      {image.titulo}{" "}
                     </h2>
                     {showButton && (
-                      <button className="text-white text-xl">Botão</button>
+                      <a
+                        href={image.url}
+                        className="text-white text-xl cursor-pointer"
+                      >
+                        Ver mais
+                      </a>
                     )}
                   </div>
                 </CSSTransition>

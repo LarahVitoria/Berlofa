@@ -4,40 +4,56 @@ import Title from "../../components/Title/title";
 import Team from "../../components/Time/time";
 import Testimonials from "../../components/Depoimento/depoimento";
 import Metologia from "../../components/ComoTrabalhamos/metodologia";
+import dep1 from "../../assets/dep1.jpeg";
+import dep2 from "../../assets/dep2.jpeg";
+import dep3 from "../../assets/dep3.png";
+import dep4 from "../../assets/dep4.png";
+import dep5 from "../../assets/dep5.png";
+import dep6 from "../../assets/dep6.png";
 
 const Sobre: React.FC = () => {
   const testimonials = [
     {
       id: 0,
       name: "Roller Land",
-      role: "",
-      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      avatarSrc: dep1,
       testimonial:
         "Quando pensamos em qualidade de serviço logo pensamos no Berlofa pois confiamos no seu trabalho incrível, a arte que ele fez trouxe ao espaço um diferencial onde todos ao entrar se deparam com a pintura na parede e se encantam com cada detalhe...desta forma somos grato pelo seu trabalho e dedicação!",
     },
     {
       id: 1,
       name: "Toninho Bicudo",
-      role: "",
-      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      avatarSrc: dep2,
       testimonial:
         "Esclareço aos futuros clientes aqueles que ainda não tiveram a oportunidade de conhecer os serviços desses excelentes profissionais que o contratem, pois eu fiz trabalhos artísticos com eles e fiquei muito contente",
     },
     {
       id: 2,
       name: "Quallycred",
-      role: "",
-      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      avatarSrc: dep3,
       testimonial:
         "Só temos a elogiar o pessoal da equipe Berlofa, o César é super atencioso e com um trabalho sensacional, todos sempre prontos a nos atender, faz anos já que temos esta parceria, fazendo um ótimo trabalho e arrasando nas artes, sempre atendendo os nossos pedidos.",
     },
     {
       id: 3,
       name: "José Roberto Siqueira Junior ",
-      role: "",
-      avatarSrc: "https://source.unsplash.com/random/100x100?4",
+      avatarSrc: dep4,
       testimonial:
         "Recomendo o trabalho de César Berlofa, um ótimo profissional, com uma ótima bagagem técnica; o qual executou um belíssimo trabalho em meu portão",
+    },
+    {
+      id: 4,
+      name: "Empório Goiano",
+      avatarSrc: dep5,
+      testimonial:
+        "Nós da Empório Goiano estamos muito satisfeitos e contentes com o resultado do trabalho!! A equipe foi profissional e cuidadosa, além de entregar um trabalho impecável, que com certeza deu vida para nosso restaurante, deixando mais acolhedor e bonito",
+    },
+    {
+      id: 5,
+      name: "Bar Gold Bar ",
+      avatarSrc: dep6,
+      testimonial:
+        "É com muito prazer que nós da Bar Gold Bar indicamos a empresa Berlofa Arte e Pinturas, pois graças a eles com a arte feita em nossos muros de anúncio, a empresa não ganhou apenas mais visibilidade, mas também ganhou mais vida. Entrega pontual, todos os processos como combinado.",
     },
   ];
 
@@ -97,7 +113,7 @@ const Sobre: React.FC = () => {
       <Metologia />
 
       <Team />
-      <Testimonials intervalTime={6000} testimonials={testimonials} />
+      <Testimonials testimonials={testimonials} intervalTime={5000} />
     </div>
   );
 };

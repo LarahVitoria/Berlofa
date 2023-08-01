@@ -52,11 +52,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <a href="logotipo">LOGOTIPOS</a>
           </li>
           <li className=" custom-list-item">
-            <a href="objetosPersonalizados">OBJETOS PERSONALIZADOS</a>
+            <a href="objetosPersonalizados">REALISMO</a>
           </li>
-          <li className=" custom-list-item">
+          {/* <li className=" custom-list-item">
             <a href="pinturadeInteriores">PINTURA DE INTERIORES</a>
-          </li>
+          </li> */}
           <li className=" custom-list-item">
             <a href="letreiros">LETREIROS</a>
           </li>

@@ -4,7 +4,6 @@ import bgDepoimento from "../../assets/bgDepoimento.jpg";
 interface Testimonial {
   id: number;
   name: string;
-  role: string;
   avatarSrc: string;
   testimonial: string;
 }
@@ -24,12 +23,6 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
 
   const nextTestimonial = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
-  const handleIndicatorClick = (index: number) => {
-    stopCarousel();
-    setActiveIndex(index);
-    setShouldRestartCarousel(true);
   };
 
   const startCarousel = () => {
@@ -56,8 +49,20 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
     return stopCarousel;
   }, []);
 
+  const handleMouseEnter = () => {
+    stopCarousel();
+  };
+
+  const handleMouseLeave = () => {
+    setShouldRestartCarousel(true);
+  };
+
   return (
-    <section className="p-6 flex items-center flex-col">
+    <section
+      className="p-6 flex items-center flex-col"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="inline-flex items-center justify-center w-full">
         <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
         <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
@@ -86,8 +91,11 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
               <div className="w-32 h-32 rounded-full overflow-hidden">
                 <img
                   src={testimonials[activeIndex].avatarSrc}
-                  alt=""
+                  alt={testimonials[activeIndex].name}
                   className="w-full h-full object-cover rounded-full"
+                  style={{
+                    objectPosition: "center top",
+                  }}
                 />
               </div>
             </div>
@@ -99,19 +107,15 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
                 <p className="my-2 font-extrabold">
                   {testimonials[activeIndex].name}
                 </p>
-                <p className="text-[#F5B502]">
-                  {testimonials[activeIndex].role}
-                </p>
               </div>
             </div>
           </div>
           <div className="flex justify-center mt-4">
             {/* Botões indicadores (bolinhas) */}
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((_, index) => (
               <button
-                key={testimonial.id}
+                key={index}
                 type="button"
-                onClick={() => handleIndicatorClick(index)}
                 className={`w-2 h-2 mx-1 rounded-full ${
                   index === activeIndex ? "bg-amber-300" : "bg-amber-100"
                 }`}

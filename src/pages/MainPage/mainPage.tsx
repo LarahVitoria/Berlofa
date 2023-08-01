@@ -1,23 +1,37 @@
 import React from "react";
 import Carousel from "../../components/Carrosel/carousel";
 import ImageGallery from "../../components/ImagesGallery/imageGallery";
-
+import d1 from "../../assets/DESTAQUES/d1.jpg";
+import d2 from "../../assets/DESTAQUES/d2.jpg";
+import d3 from "../../assets/DESTAQUES/d3.jpg";
+import d4 from "../../assets/DESTAQUES/d4.jpg";
 const MainPage: React.FC = () => {
+  const destaque = [d1, d2, d3, d4];
   const images = [
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
-    "https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp",
+    {
+      img: d1,
+      titulo: "Fachadas",
+      url: "/fachadas",
+    },
+    {
+      img: d2,
+      titulo: "Fachadas",
+      url: "/fachadas",
+    },
+    {
+      img: d3,
+      titulo: "Fachadas",
+      url: "/fachadas",
+    },
+    {
+      img: d4,
+      titulo: "Fachadas",
+      url: "/fachadas",
+    },
   ];
-
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Carousel images={images} interval={2500} />
+      <Carousel images={destaque} interval={2500} />
       <hr
         className="my-6"
         style={{ borderColor: "#f5b502", height: "1px", width: "80%" }}
