@@ -64,8 +64,8 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
       onMouseLeave={handleMouseLeave}
     >
       <div className="inline-flex items-center justify-center w-full">
-        <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
-        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
+        <hr className="w-full h-px my-8 bg-[#F5B502] border-0" />
+        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 ">
           Depoimentos
         </span>
       </div>
@@ -85,11 +85,12 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
               borderRadius: "8px",
               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.62) 100%), url(${bgDepoimento}), lightgray 50% / cover no-repeat`,
             }}
-            className="flex flex-col md:flex-row md:items-center justify-center w-full p-6 lg:h-full lg:p-8 dark:bg-gray-900 dark:text-gray-100 relative"
+            className="flex flex-col md:flex-row md:items-center justify-center w-full p-6 lg:h-full lg:p-8 relative"
           >
             <div className="md:mr-8 flex justify-center">
               <div className="w-32 h-32 rounded-full overflow-hidden">
                 <img
+                  loading="lazy"
                   src={testimonials[activeIndex].avatarSrc}
                   alt={testimonials[activeIndex].name}
                   className="w-full h-full object-cover rounded-full"

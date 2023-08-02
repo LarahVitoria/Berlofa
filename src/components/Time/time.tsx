@@ -11,6 +11,7 @@ const TeamMember = ({ name, role, imageUrl }) => {
     <div className="flex flex-col items-center p-4">
       <img
         src={imageUrl}
+        loading="lazy"
         alt={name}
         className="rounded-full w-24 h-24 object-cover mb-4"
       />
@@ -57,8 +58,8 @@ const Team = () => {
   return (
     <div className="max-w-5xl mx-auto p-8">
       <div className="inline-flex items-center justify-center w-full">
-        <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
-        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
+        <hr className="w-full h-px my-8 bg-[#F5B502] border-0 " />
+        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 ">
           Nossa Equipe
         </span>
       </div>

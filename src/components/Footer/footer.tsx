@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
       className="w-full text-[#f5b502] bg-no-repeat bg-cover"
     >
       <div className="container mx-auto px-2 lg:px-32 flex items-center justify-between h-full">
-        <img src={logo} className="w-28 md:w-48" alt="Berlofa" />
+        <img src={logo} className="w-28 md:w-48" alt="Berlofa" loading="lazy" />
         <p className="text-sm md:text-lg font-semibold">
           © {new Date().getFullYear()}
           <a className="cursor-pointer"> - Desenvolvido por Larah</a>

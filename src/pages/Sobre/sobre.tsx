@@ -66,28 +66,34 @@ const Sobre: React.FC = () => {
         <div className="p-2">
           <h2 className="text-xl font-bold">Nossa história</h2>
           <p className="mt-4">
-            A Berlofa arte e pintura nasceu da paixão pela arte e a vontade
-            incontrolável de empreender. No início éramos um só artista, eu
-            César Berlofa, logo vi necessidade de uma equipe, pelo fato de meu
-            filho estar nascendo e eu não poder estar em todos os lugares ao
-            mesmo tempo. Criamos uma equipe grande com advogado, administrativo
-            e operacional. Não foi o suficiente, pois a caminhada ainda era
-            longa para que tudo se encaixasse, então fomos obrigados a desfazer
-            tudo! Desde equipe até mesmo venda de novos trabalhos. Paramos tudo,
-            entregamos os trabalhos que estavam em andamento e recomeçamos!
-            Agora sim com um alicerce muito mais profundo e firme, nos
-            aprimoramos na arte e em tudo que ela podia oferecer. Das técnicas
-            mais difíceis até as mais simples, nos melhoramos tudo, para que a
-            entrega fosse 100%. Mas ainda não estávamos contentes, então
-            decidimos agregar uma equipe administrativa e de propaganda, nos
-            aprofundando em melhor atender os clientes desde assinatura do
-            contrato até depois da entrega do trabalho. Hoje temos nossa sede,
-            no centro de Tatuí e já contamos com mais de 10 cidades por o de
-            passamos e deixamos nosso trabalho alegrando a vista para quem
-            passar. Hoje temos a honra de dizer que somos a maior empresa de
-            pintura de Tatuí, contando com serviços para fachadas de
-            empreendimentos, decorações interna para casas e empresas, pintura
-            de base em geral, muros de anúncio e personalização de itens.
+            A Berlofa Arte e Pintura nasceu da paixão pela arte e da vontade
+            incontrolável de empreender. No início, éramos um único artista, eu,
+            César Berlofa. Logo, percebi a necessidade de formar uma equipe,
+            pois meu filho estava nascendo e eu não poderia estar em todos os
+            lugares ao mesmo tempo. Criamos uma equipe grande, incluindo
+            advogado, administrativo e operacional. No entanto, isso não foi
+            suficiente, pois a jornada ainda era longa para que tudo se
+            encaixasse, então fomos obrigados a desfazer tudo! Desde a equipe
+            até mesmo a venda de novos trabalhos. Paramos tudo, entregamos os
+          </p>
+          projetos que estavam em andamento e recomeçamos!
+          <p className="mt-4">
+            Agora sim, com um alicerce muito mais profundo e firme, aprimoramos
+            nossas habilidades na arte e em tudo que ela podia oferecer.
+            Dominamos desde as técnicas mais difíceis até as mais simples,
+            aprimorando tudo, para que a entrega fosse 100% satisfatória. Ainda
+            assim, não estávamos satisfeitos e decidimos agregar uma equipe
+            administrativa e de propaganda, aprofundando-nos em proporcionar um
+            melhor atendimento aos clientes, desde a assinatura do contrato até
+            depois da entrega do trabalho.
+          </p>
+          <p className="mt-4">
+            Hoje, temos nossa sede no centro de Tatuí e já atendemos mais de 10
+            cidades, onde deixamos nosso trabalho alegrando a vista de quem
+            passa. Temos a honra de dizer que somos a maior empresa de pintura
+            de Tatuí, oferecendo serviços para fachadas de empreendimentos,
+            decorações internas para casas e empresas, pintura de base em geral,
+            muros de anúncio e personalização de itens.
           </p>
         </div>
 
@@ -97,16 +103,19 @@ const Sobre: React.FC = () => {
             src="https://via.placeholder.com/200"
             alt="Imagem 1"
             className="w-full mb-4"
+            loading="lazy"
           />
           <img
             src="https://via.placeholder.com/200"
             alt="Imagem 2"
             className="w-full mb-4"
+            loading="lazy"
           />
           <img
             src="https://via.placeholder.com/200"
             alt="Imagem 3"
             className="w-full mb-4"
+            loading="lazy"
           />
         </div>
       </div>

@@ -2,7 +2,11 @@ import React from "react";
 import bgContato from "../../assets/bgContato.jpg";
 import Title from "../../components/Title/title";
 import { IoLocationOutline } from "react-icons/io5";
-import { AiOutlineWhatsApp, AiOutlineInstagram } from "react-icons/ai";
+import {
+  AiOutlineWhatsApp,
+  AiOutlineInstagram,
+  AiOutlineYoutube,
+} from "react-icons/ai";
 import Ilustration from "../../assets/ilustration-contato.svg";
 
 const Contato: React.FC = () => {
@@ -16,9 +20,9 @@ const Contato: React.FC = () => {
               Entre em contato conosco e deixe-nos tornar seus espaços
               extraordinários! Nossa equipe está pronta para ouvir suas ideias,
               responder às suas perguntas e oferecer soluções personalizadas
-              para suas necessidades de pintura e decoração. Orçamentos a partir
-              de R$500,00.
+              para suas necessidades de pintura e decoração.
             </p>
+            <p className="py-5 font-medium">Orçamentos a partir de R$500,00.</p>
             <div className="flex items-center py-4 ">
               <div className="w-12 h-12 bg-[#313131] rounded-lg flex items-center justify-center">
                 <IoLocationOutline size={24} className="text-[#FFC727]" />
@@ -63,8 +67,22 @@ const Contato: React.FC = () => {
                 </a>
               </div>
             </div>
+            <div className="flex items-center py-4 ">
+              <div className="w-12 h-12 bg-[#313131] rounded-lg flex items-center justify-center">
+                <AiOutlineYoutube size={24} className="text-[#FFC727]" />
+              </div>
+              <div className="ml-4">
+                <h2 className="text-lg text-[#FFC727] font-bold">YouTube</h2>
+                <a
+                  href="https://www.youtube.com/@BerlofaArteePinturas"
+                  className="text-gray-600 hover:text-gray-900 hover:font-medium"
+                >
+                  @BerlofaArteePinturas
+                </a>
+              </div>
+            </div>
           </div>
-          <img src={Ilustration} alt="Ilustração " />
+          <img src={Ilustration} alt="Ilustração " loading="lazy" />
         </div>
       </div>
       <a

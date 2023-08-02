@@ -79,6 +79,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                         ? "scale-110"
                         : ""
                     }`}
+                    loading="lazy"
                     src={image.img}
                   />
                 </div>
@@ -90,8 +91,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                   unmountOnExit
                 >
                   <div className="absolute inset-0 flex items-center justify-center flex-col bg-black bg-opacity-50 transition-opacity duration-300">
-                    <h2 className="text-white text-4xl font-bold leading-8 mb-2">
-                      {image.titulo}{" "}
+                    <h2 className="text-white text-4xl font-bold leading-8 mb-2 text-center">
+                      {image.titulo}
                     </h2>
                     {showButton && (
                       <a

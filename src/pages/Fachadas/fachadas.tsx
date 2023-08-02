@@ -8,6 +8,7 @@ import f5 from "../../assets/FACHADAS/f5.png";
 import f6 from "../../assets/FACHADAS/f6.png";
 import f7 from "../../assets/FACHADAS/f7.png";
 import f8 from "../../assets/FACHADAS/f8.png";
+import f9 from "../../assets/FACHADAS/f9.jpg";
 import ImageGallery from "../../components/ImagesGallery/imageGallery";
 import Title from "../../components/Title/title";
 
@@ -21,6 +22,7 @@ const Fachadas: React.FC = () => {
     { img: f6 },
     { img: f7 },
     { img: f8 },
+    { img: f9 },
   ];
 
   return (

@@ -49,22 +49,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <a href="fachada">FACHADAS</a>
           </li>
           <li className=" custom-list-item">
-            <a href="logotipo">LOGOTIPOS</a>
+            <a href="letreiroselogotipos">LETREIROS E LOGOTIPOS</a>
           </li>
           <li className=" custom-list-item">
-            <a href="objetosPersonalizados">REALISMO</a>
-          </li>
-          {/* <li className=" custom-list-item">
-            <a href="pinturadeInteriores">PINTURA DE INTERIORES</a>
-          </li> */}
-          <li className=" custom-list-item">
-            <a href="letreiros">LETREIROS</a>
+            <a href="realistas">REALISTAS</a>
           </li>
           <li className=" custom-list-item">
-            <a href="murosdeAnuncios">MUROS DE ANÚNCIOS</a>
+            <a href="murosdeanuncios">MUROS DE ANÚNCIOS</a>
           </li>
           <li className=" custom-list-item">
-            <a href="sobreNos">SOBRE NÓS</a>
+            <a href="botanica">ARTE BOTÂNICA</a>
+          </li>
+          <li className=" custom-list-item">
+            <a href="pinturaemaco">PINTURA EM AÇOS</a>
+          </li>
+          <li className=" custom-list-item">
+            <a href="decoracoes">DECORAÇÕES</a>
+          </li>
+          <li className=" custom-list-item">
+            <a href="sobrenos">SOBRE NÓS</a>
           </li>
           <li className=" custom-list-item">
             <a href="contato">CONTATO</a>

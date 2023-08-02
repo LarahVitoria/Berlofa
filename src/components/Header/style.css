@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 
   @media(max-width: 768px) {
     font-size: 25px;

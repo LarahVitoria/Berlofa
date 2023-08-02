@@ -24,7 +24,7 @@ const Title: React.FC<TitleProps> = ({
         style={{
           color: `${color}`,
         }}
-        className="font-semibold text-2xl md:text-5xl"
+        className="font-semibold text-2xl md:text-5xl uppercase"
       >
         {content}
       </h1>

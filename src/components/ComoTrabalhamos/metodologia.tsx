@@ -44,8 +44,8 @@ const Metodologia = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="inline-flex items-center justify-center w-full">
-        <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
-        <span className="absolute px-3 text-[#F5B502] text-xl md:text-xl text-center md:text-3xl font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
+        <hr className="w-full h-px my-8 bg-[#F5B502] border-0 " />
+        <span className="absolute px-3 text-[#F5B502] text-xl md:text-xl text-center md:text-3xl font-semibold -translate-x-1/2 bg-white left-1/2 ">
           Nosso Compromisso
         </span>
       </div>
@@ -104,8 +104,8 @@ const Metodologia = () => {
       </div>
 
       <div className="inline-flex items-center justify-center w-full mt-8">
-        <hr className="w-full h-px my-8 bg-[#F5B502] border-0 dark:bg-gray-700" />
-        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">
+        <hr className="w-full h-px my-8 bg-[#F5B502] border-0" />
+        <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 ">
           Metodologia
         </span>
       </div>

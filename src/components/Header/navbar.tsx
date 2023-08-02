@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     <nav className="shadow-md flex justify-between xl:px-44">
       <div className="m-3 ">
         <a href="/">
-          <img src={logo} width={"150px"} alt="Belofa" />
+          <img src={logo} width={"150px"} alt="Belofa" loading="lazy" />
         </a>
       </div>
 

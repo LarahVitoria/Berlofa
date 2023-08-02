@@ -56,6 +56,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000 }) => {
             style={{ overflow: "hidden", height: "100%" }}
           >
             <img
+              loading="lazy"
               src={image}
               alt={`Image ${index}`}
               className="w-full h-full object-cover rounded-lg"
