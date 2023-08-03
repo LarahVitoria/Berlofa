@@ -25,7 +25,7 @@ const MainPage: React.FC = () => {
     {
       img: img1,
       titulo: "LETREIROS E LOGOTIPOS",
-      url: "/etreiroselogotipos",
+      url: "/letreiroselogotipos",
     },
     {
       img: img7,

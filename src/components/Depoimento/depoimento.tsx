@@ -59,7 +59,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
 
   return (
     <section
-      className="p-6 flex items-center flex-col"
+      className="p-6 flex items-center flex-col max-w-6xl"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

@@ -10,6 +10,9 @@ import dep3 from "../../assets/dep3.png";
 import dep4 from "../../assets/dep4.png";
 import dep5 from "../../assets/dep5.png";
 import dep6 from "../../assets/dep6.png";
+import pl1 from "../../assets/pl1.jpg";
+import pl2 from "../../assets/pl2.jpg";
+import pl3 from "../../assets/pl3.jpg";
 
 const Sobre: React.FC = () => {
   const testimonials = [
@@ -60,11 +63,16 @@ const Sobre: React.FC = () => {
   return (
     <div className="flex justify-center flex-col items-center mb-32">
       <Title color="#000" content="Sobre Nós" backgroundImageUrl={bgSobre2} />
-
-      <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      {/* md:grid-cols-2  */}
+      <div className="max-w-2xl mx-auto grid grid-cols-1 gap-4 p-4">
         {/* Coluna de texto */}
         <div className="p-2">
-          <h2 className="text-xl font-bold">Nossa história</h2>
+          <div className="inline-flex items-center justify-center w-full mt-8">
+            <hr className="w-full h-px my-8 bg-[#F5B502] border-0" />
+            <span className="absolute px-3 text-[#F5B502] text-xl md:text-3xl text-center font-semibold -translate-x-1/2 bg-white left-1/2 ">
+              Nossa história
+            </span>
+          </div>
           <p className="mt-4">
             A Berlofa Arte e Pintura nasceu da paixão pela arte e da vontade
             incontrolável de empreender. No início, éramos um único artista, eu,
@@ -98,31 +106,31 @@ const Sobre: React.FC = () => {
         </div>
 
         {/* Coluna de imagens */}
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-1">
+        {/* <div className="grid grid-cols-3 gap-4 md:grid-cols-1">
           <img
-            src="https://via.placeholder.com/200"
+            src={pl1}
             alt="Imagem 1"
             className="w-full mb-4"
             loading="lazy"
           />
           <img
-            src="https://via.placeholder.com/200"
+            src={pl3}
             alt="Imagem 2"
             className="w-full mb-4"
             loading="lazy"
           />
           <img
-            src="https://via.placeholder.com/200"
+            src={pl2}
             alt="Imagem 3"
             className="w-full mb-4"
             loading="lazy"
           />
-        </div>
+        </div> */}
       </div>
       <Metologia />
 
       <Team />
-      <Testimonials testimonials={testimonials} intervalTime={5000} />
+      <Testimonials testimonials={testimonials} intervalTime={7000} />
     </div>
   );
 };

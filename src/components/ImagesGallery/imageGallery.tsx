@@ -73,7 +73,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                 >
                   <img
                     alt={image.titulo}
-                    className={`object-fill w-full h-full transition-transform ${
+                    className={`object-contain w-full h-full transition-transform ${
                       hoveredIndexes[index * cols + imgIndex] !== null
                         ? "scale-110"
                         : ""
