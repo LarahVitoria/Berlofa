@@ -17,10 +17,10 @@ const Contato: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7 items-start">
           <div>
             <p>
-              Entre em contato conosco e deixe-nos tornar seus espaços
-              extraordinários! Nossa equipe está pronta para ouvir suas ideias,
-              responder às suas perguntas e oferecer soluções personalizadas
-              para suas necessidades de pintura e decoração.
+              Vamos tornar suas paredes extraordinárias! Nossa equipe está
+              pronta para ouvir suas ideias, responder às suas perguntas e
+              oferecer soluções personalizadas para suas necessidades de pintura
+              e decoração.
             </p>
             <p className="py-5 font-medium">Orçamentos a partir de R$500,00.</p>
             <div className="flex items-center py-4 ">

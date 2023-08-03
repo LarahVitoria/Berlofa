@@ -67,14 +67,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
               >
                 <div
                   style={{
-                    boxShadow:
-                      "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px, rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset",
+                    boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
                   }}
                   className="w-full h-64 md:h-56 lg:h-96 overflow-hidden"
                 >
                   <img
                     alt={image.titulo}
-                    className={`object-cover w-full h-full transition-transform ${
+                    className={`object-fill w-full h-full transition-transform ${
                       hoveredIndexes[index * cols + imgIndex] !== null
                         ? "scale-110"
                         : ""

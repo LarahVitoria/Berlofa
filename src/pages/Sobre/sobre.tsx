@@ -37,14 +37,14 @@ const Sobre: React.FC = () => {
     {
       id: 3,
       name: "José Roberto Siqueira Junior ",
-      avatarSrc: dep4,
+      avatarSrc: dep5,
       testimonial:
         "Recomendo o trabalho de César Berlofa, um ótimo profissional, com uma ótima bagagem técnica; o qual executou um belíssimo trabalho em meu portão",
     },
     {
       id: 4,
       name: "Empório Goiano",
-      avatarSrc: dep5,
+      avatarSrc: dep4,
       testimonial:
         "Nós da Empório Goiano estamos muito satisfeitos e contentes com o resultado do trabalho!! A equipe foi profissional e cuidadosa, além de entregar um trabalho impecável, que com certeza deu vida para nosso restaurante, deixando mais acolhedor e bonito",
     },

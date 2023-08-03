@@ -13,7 +13,6 @@ import r8 from "../../assets/REALISTAS/r8.jpg";
 import r9 from "../../assets/REALISTAS/r9.jpg";
 import r10 from "../../assets/REALISTAS/r10.jpg";
 import r11 from "../../assets/REALISTAS/r11.jpg";
-import r12 from "../../assets/REALISTAS/r12.jpg";
 import r13 from "../../assets/REALISTAS/r13.jpg";
 import r14 from "../../assets/REALISTAS/r14.jpg";
 import r15 from "../../assets/REALISTAS/r15.jpg";
@@ -38,7 +37,6 @@ const Realista: React.FC = () => {
     { img: r9 },
     { img: r10 },
     { img: r11 },
-    { img: r12 },
     { img: r13 },
     { img: r14 },
     { img: r15 },
