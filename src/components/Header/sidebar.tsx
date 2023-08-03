@@ -46,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <a href="/">HOME</a>
           </li>
           <li className=" custom-list-item">
-            <a href="fachada">FACHADAS</a>
+            <a href="fachadas">FACHADAS</a>
           </li>
           <li className=" custom-list-item">
             <a href="letreiroselogotipos">LETREIROS E LOGOTIPOS</a>
