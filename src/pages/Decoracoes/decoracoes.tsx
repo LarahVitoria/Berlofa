@@ -11,7 +11,11 @@ const Decoracoes: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title color="#fff" content="Decoraçoes" backgroundImageUrl={bgAmarelo} />
+      <Title
+        color="#F5B502"
+        content="Decorações"
+        backgroundImageUrl={bgAmarelo}
+      />
       <ImageGallery
         images={images}
         gridCols={2}

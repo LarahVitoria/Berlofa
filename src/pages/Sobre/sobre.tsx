@@ -26,7 +26,7 @@ const Sobre: React.FC = () => {
     {
       id: 1,
       name: "Toninho Bicudo",
-      avatarSrc: dep2,
+      avatarSrc: dep5,
       testimonial:
         "Esclareço aos futuros clientes aqueles que ainda não tiveram a oportunidade de conhecer os serviços desses excelentes profissionais que o contratem, pois eu fiz trabalhos artísticos com eles e fiquei muito contente",
     },
@@ -40,7 +40,7 @@ const Sobre: React.FC = () => {
     {
       id: 3,
       name: "José Roberto Siqueira Junior ",
-      avatarSrc: dep5,
+      avatarSrc: dep2,
       testimonial:
         "Recomendo o trabalho de César Berlofa, um ótimo profissional, com uma ótima bagagem técnica; o qual executou um belíssimo trabalho em meu portão",
     },
@@ -73,7 +73,7 @@ const Sobre: React.FC = () => {
               Nossa história
             </span>
           </div>
-          <p className="mt-4">
+          <p className="mt-4  text-justify">
             A Berlofa Arte e Pintura nasceu da paixão pela arte e da vontade
             incontrolável de empreender. No início, éramos um único artista, eu,
             César Berlofa. Logo, percebi a necessidade de formar uma equipe,
@@ -83,9 +83,9 @@ const Sobre: React.FC = () => {
             suficiente, pois a jornada ainda era longa para que tudo se
             encaixasse, então fomos obrigados a desfazer tudo! Desde a equipe
             até mesmo a venda de novos trabalhos. Paramos tudo, entregamos os
+            projetos que estavam em andamento e recomeçamos!
           </p>
-          projetos que estavam em andamento e recomeçamos!
-          <p className="mt-4">
+          <p className="mt-4 text-justify">
             Agora sim, com um alicerce muito mais profundo e firme, aprimoramos
             nossas habilidades na arte e em tudo que ela podia oferecer.
             Dominamos desde as técnicas mais difíceis até as mais simples,
@@ -95,13 +95,11 @@ const Sobre: React.FC = () => {
             melhor atendimento aos clientes, desde a assinatura do contrato até
             depois da entrega do trabalho.
           </p>
-          <p className="mt-4">
+          <p className="mt-4 text-justify">
             Hoje, temos nossa sede no centro de Tatuí e já atendemos mais de 10
             cidades, onde deixamos nosso trabalho alegrando a vista de quem
             passa. Temos a honra de dizer que somos a maior empresa de pintura
-            de Tatuí, oferecendo serviços para fachadas de empreendimentos,
-            decorações internas para casas e empresas, pintura de base em geral,
-            muros de anúncio e personalização de itens.
+            de Tatuí.
           </p>
         </div>
 

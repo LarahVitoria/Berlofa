@@ -56,8 +56,7 @@ const Metodologia = () => {
         </h2>
       </div>
       <p className="text-lg text-center md:text-left">
-        Nossos serviços oferecem uma cobertura com material de excelência,
-        utilizando a renomada marca SUVINIL - Esmalte sintético/Base solvente.
+        Nossos serviços oferecem uma cobertura com material de excelência.
         Garantimos que não haverá desgaste antes do período estipulado,
         proporcionando uma pintura duradoura e impecável.
       </p>

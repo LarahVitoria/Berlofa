@@ -27,7 +27,11 @@ const Fachadas: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
-      <Title color="#fff" content="Fachadas" backgroundImageUrl={bgAmarelo} />
+      <Title
+        color="#F5B502"
+        content="Fachadas"
+        backgroundImageUrl={bgAmarelo}
+      />
       <ImageGallery
         images={images}
         gridCols={2}

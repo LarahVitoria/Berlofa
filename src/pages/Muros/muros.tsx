@@ -11,7 +11,15 @@ import ImageGallery from "../../components/ImagesGallery/imageGallery";
 import Title from "../../components/Title/title";
 
 const Muros: React.FC = () => {
-  const images = [a1, a2, a3, a4, a5, a6, a7];
+  const images = [
+    { img: a1 },
+    { img: a2 },
+    { img: a3 },
+    { img: a4 },
+    { img: a5 },
+    { img: a6 },
+    { img: a7 },
+  ];
 
   return (
     <div className="flex justify-center flex-col items-center mb-32">
