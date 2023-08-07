@@ -63,9 +63,7 @@ const Sobre: React.FC = () => {
   return (
     <div className="flex justify-center flex-col items-center mb-32">
       <Title color="#000" content="Sobre Nós" backgroundImageUrl={bgSobre2} />
-      {/* md:grid-cols-2  */}
       <div className="max-w-2xl mx-auto grid grid-cols-1 gap-4 p-4">
-        {/* Coluna de texto */}
         <div className="p-2">
           <div className="inline-flex items-center justify-center w-full mt-8">
             <hr className="w-full h-px my-8 bg-[#F5B502] border-0" />
@@ -102,28 +100,6 @@ const Sobre: React.FC = () => {
             de Tatuí.
           </p>
         </div>
-
-        {/* Coluna de imagens */}
-        {/* <div className="grid grid-cols-3 gap-4 md:grid-cols-1">
-          <img
-            src={pl1}
-            alt="Imagem 1"
-            className="w-full mb-4"
-            loading="lazy"
-          />
-          <img
-            src={pl3}
-            alt="Imagem 2"
-            className="w-full mb-4"
-            loading="lazy"
-          />
-          <img
-            src={pl2}
-            alt="Imagem 3"
-            className="w-full mb-4"
-            loading="lazy"
-          />
-        </div> */}
       </div>
       <Metologia />
 

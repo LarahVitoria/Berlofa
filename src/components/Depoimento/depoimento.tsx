@@ -112,7 +112,6 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({
             </div>
           </div>
           <div className="flex justify-center mt-4">
-            {/* Botões indicadores (bolinhas) */}
             {testimonials.map((_, index) => (
               <button
                 key={index}

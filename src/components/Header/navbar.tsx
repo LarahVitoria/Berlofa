@@ -21,13 +21,23 @@ const Navbar: React.FC = () => {
           <img src={logo} width={"150px"} alt="Belofa" loading="lazy" />
         </a>
       </div>
+      <div className="flex items-center">
+        <button
+          className="bg-[#ffc727] hover:bg-black text-black hover:text-white px-4 py-2 rounded-full font-semibold shadow-lg transition-all duration-300 uppercase text-sm md:text-base"
+          onClick={() =>
+            (window.location.href = "https://form.jotform.com/232015497370050")
+          }
+        >
+          Orçamento
+        </button>
+        <button
+          onClick={toggleMenu}
+          className="right-0 top-0 md:m-4 m-1 p-2 bg-transparent text-slate-800 hover:text-amber-400"
+        >
+          <FiMenu style={{ color: "#000" }} size={35} />
+        </button>
+      </div>
 
-      <button
-        onClick={toggleMenu}
-        className="right-0 top-0 m-4 p-2 bg-transparent text-slate-800 hover:text-amber-400"
-      >
-        <FiMenu style={{ color: "#000" }} size={35} />
-      </button>
       <Sidebar isOpen={isOpen} onClose={closeMenu} />
     </nav>
   );
