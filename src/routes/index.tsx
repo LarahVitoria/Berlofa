@@ -10,6 +10,7 @@ import Muros from "../pages/Muros/muros";
 import Sobre from "../pages/Sobre/sobre";
 import Contato from "../pages/Contato/contato";
 import Botanica from "../pages/Botanica/botanica";
+import Agradecimento from "../pages/Agradecimentos/agradecimento";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/decoracoes" element={<Decoracoes />} />
       <Route path="/sobrenos" element={<Sobre />} />
       <Route path="/contato" element={<Contato />} />
+      <Route path="/agradecimentos" element={<Agradecimento />} />
     </Routes>
   );
 };
